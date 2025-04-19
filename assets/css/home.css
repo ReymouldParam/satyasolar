@@ -783,7 +783,7 @@
 
 /*********************** section4 ***************************************/
 
-.section-bg4 {
+/* .section-bg4 {
     background-image: url('../images/section4-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -792,7 +792,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
+ 
 
 .section5 {
     background-image: url('../images/section-bg5.png');
@@ -905,7 +906,7 @@
 /* section6 FAQ */
 .section6 {
     background-color: #feecc9;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -923,7 +924,7 @@
 }
 
 .faq-container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 

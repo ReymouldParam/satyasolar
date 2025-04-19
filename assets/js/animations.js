@@ -1,6 +1,5 @@
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Section 2 animations
@@ -209,4 +208,113 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'power2.out'
             }, '-=0.3');
     }
+    //  section5
+    const section5 = document.querySelector('.section5');
+    if (!section5) return;
+
+    const section5Tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: section5,
+            start: 'top 80%',
+            end: 'center center',
+            toggleActions: 'play none none reverse',
+            markers: false
+        }
+    });
+
+    // Set initial states
+    gsap.set('.section5-content', { opacity: 0, y: 50 });
+    gsap.set('.images-column', { x: -100, opacity: 0 });
+    gsap.set('.text-column', { x: 100, opacity: 0 });
+    gsap.set('.image-box', { scale: 0.8, opacity: 0, rotationY: -30 });
+    gsap.set('.bottom-image img', { scale: 0.8, opacity: 0, rotationY: 30 });
+    gsap.set('.text-column h2', { y: 50, opacity: 0 });
+    gsap.set('.text-column p', { y: 30, opacity: 0 });
+    gsap.set('.cta-button', { scale: 0.8, opacity: 0 });
+
+    // Timeline animation
+    section5Tl
+        .to('.section5-content', { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' })
+        .to('.images-column', { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.8')
+        .to('.text-column', { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.8')
+        .to('.image-box', {
+            scale: 1, opacity: 1, rotationY: 0, duration: 0.8, stagger: 0.2, ease: 'back.out(1.7)'
+        }, '-=0.6')
+        .to('.bottom-image img', {
+            scale: 1, opacity: 1, rotationY: 0, duration: 0.8, ease: 'back.out(1.7)'
+        }, '-=0.6')
+        .to('.text-column h2', {
+            y: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
+        }, '-=0.6')
+        .to('.text-column p', {
+            y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out'
+        }, '-=0.6')
+        .to('.cta-button', {
+            scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.7)'
+        }, '-=0.4');
+
+    // Hover effects
+    document.querySelectorAll('.image-box').forEach(box => {
+        box.addEventListener('mouseenter', () => {
+            gsap.to(box, {
+                scale: 1.05,
+                rotationY: 5,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+
+        box.addEventListener('mouseleave', () => {
+            gsap.to(box, {
+                scale: 1,
+                rotationY: 0,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+    });
+
+    const bottomImage = document.querySelector('.bottom-image img');
+    if (bottomImage) {
+        bottomImage.addEventListener('mouseenter', () => {
+            gsap.to(bottomImage, {
+                scale: 1.05,
+                rotationY: 5,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+
+        bottomImage.addEventListener('mouseleave', () => {
+            gsap.to(bottomImage, {
+                scale: 1,
+                rotationY: 0,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+    }
+
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('mouseenter', () => {
+            gsap.to(ctaButton, {
+                scale: 1.05,
+                backgroundColor: '#e0a420',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+
+        ctaButton.addEventListener('mouseleave', () => {
+            gsap.to(ctaButton, {
+                scale: 1,
+                backgroundColor: '#fcb426',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+    }
+
+
 }); 
