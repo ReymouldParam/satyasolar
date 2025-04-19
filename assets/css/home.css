@@ -169,7 +169,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    /* background: linear-gradient(90deg, #2196f3, #64b5f6, #2196f3); */
+ 
     background-size: 200% 100%;
     animation: gradientFlow 3s linear infinite;
 }
@@ -376,8 +376,7 @@
     color: white;
 }
 
-/********************* SECTION2 */
-
+/********************* SECTION2 *************************************/
 .section2 {
     display: flex;
     justify-content: space-between;
@@ -425,16 +424,6 @@
     visibility: visible;
 }
 
-
-/* .arrow-icon:hover {
-    background-color: #0072ce;
-    transform: scale(1.05);
-}
-
-.arrow-icon:hover i {
-    color: #ffd375;
-    transform: translateX(5px);
-} */
 
 .para-arrow{
     display: flex;
@@ -485,15 +474,79 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* section3 */
+/******************************** section3 ***********************************/
+.section3 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: section3FadeIn 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes section3FadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+.section3-content {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: contentReveal 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 1.5s;
+}
+
+@keyframes contentReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.section3-title {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: titleSlideIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.6s;
+}
+
+@keyframes titleSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .section3-bg {
     background-image: url('../images/section3-bg.png');
     background-size: cover;
     background-color: #007ac1;
     background-repeat: no-repeat;
-    /* background-position: center; */
     padding-bottom: 30px;
     border-radius: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: sectionFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes sectionFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .services-section {
@@ -501,7 +554,6 @@
     justify-content: center;
     gap: 20px;
     padding: 20px 0;
-    /* flex-wrap: wrap; */
     z-index: 4;
     position: relative;
     transform: translateY(50px);
@@ -521,12 +573,41 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
 }
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes cardPopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+.service-card:nth-child(4) { animation-delay: 0.6s; }
 
 .service-card img {
     width: 80px;
     height: 80px;
     filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+    margin-top: -20px;
+}
+
+.service-card:hover img {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .service-card p {
@@ -535,7 +616,6 @@
     margin-top: 15px;
     line-height: 1.3;
 }
-
 
 .container {
     padding: 50px;
@@ -546,8 +626,20 @@
     margin: auto;
     overflow: hidden;
     background-image: url('../images/carousel-bg.png');
-    /* Make sure child content is clipped within border radius */
     box-sizing: border-box;
+    opacity: 0;
+    animation: containerFadeIn 0.8s ease-out forwards 0.6s;
+}
+
+@keyframes containerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .carousel-header {
@@ -555,18 +647,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .carousel-header h2 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
+    opacity: 0;
+    animation: slideInLeft 0.6s ease-out forwards 0.8s;
 }
 
 .carousel-header p {
     font-size: 16px;
     color: #ddd;
+    opacity: 0;
+    animation: slideInLeft 0.6s ease-out forwards 1s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .view-all-btn {
@@ -580,6 +686,12 @@
     border-radius: 20px;
     text-decoration: none;
     margin-top: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    transform: translateY(-3px);
+    background: #e4a633;
 }
 
 .responsive {
@@ -599,6 +711,12 @@
     gap: 10px;
     font-family: 'Heebo';
     margin: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.rooftop-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .rooftop-card h3 {
@@ -607,13 +725,17 @@
     color: #000;
     margin: 0;
     padding-bottom: 10px;
-    ;
 }
 
 .card-image {
     width: 100%;
     border-radius: 12px;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.rooftop-card:hover .card-image {
+    transform: scale(1.03);
 }
 
 .card-text {
@@ -635,7 +757,11 @@
     margin: 0 6px;
     background-color: #d9d9d9;
     border-radius: 50%;
+    transition: transform 0.3s ease;
+}
 
+.slick-dots li:hover {
+    transform: scale(1.2);
 }
 
 .slick-dots li button {
@@ -644,19 +770,19 @@
     height: 16px;
     border-radius: 50%;
     background-color: #d9d9d9;
-    /* Inactive dot: light gray */
     border: none;
     outline: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .slick-dots li.slick-active button {
     background-color: #e4a633;
-    /* Active dot: golden-orange */
+    transform: scale(1.2);
 }
 
-/* section4 */
+/*********************** section4 ***************************************/
+
 .section-bg4 {
     background-image: url('../images/section4-bg.png');
     background-size: cover;
