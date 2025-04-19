@@ -1,7 +1,7 @@
-
-gsap.registerPlugin(ScrollTrigger);
 // Initialize animations when DOM is loaded
+gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
+
     // Section 2 animations
     const section2 = document.querySelector('.section2');
     if (section2) {
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .from(card.querySelector('img'), {
                     y: 30,
                     opacity: 0,
-                    rotation: -15,
+                    rotation: 0,
                     duration: 0.6,
                     ease: 'back.out(1.7)'
                 }, '-=0.4')
@@ -208,113 +208,424 @@ document.addEventListener('DOMContentLoaded', () => {
                 ease: 'power2.out'
             }, '-=0.3');
     }
-    //  section5
+
+    // Section 5 animations
     const section5 = document.querySelector('.section5');
-    if (!section5) return;
+    if (section5) {
+        // Create a timeline for section5
+        const section5Tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.section5',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse',
+                scrub: false
+            }
+        });
 
-    const section5Tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: section5,
-            start: 'top 80%',
-            end: 'center center',
-            toggleActions: 'play none none reverse',
-            markers: false
+        // Set initial states
+        gsap.set('.section5-content', {
+            opacity: 0,
+            y: 50
+        });
+        gsap.set('.images-column', {
+            x: -100,
+            opacity: 0
+        });
+        gsap.set('.text-column', {
+            x: 100,
+            opacity: 0
+        });
+        gsap.set('.image-box', {
+            scale: 0.8,
+            opacity: 0,
+            rotationY: -30,
+            transformOrigin: "center center"
+        });
+        gsap.set('.bottom-image img', {
+            scale: 0.8,
+            opacity: 0,
+            rotationY: 30,
+            transformOrigin: "center center"
+        });
+        gsap.set('.text-column h2', {
+            y: 50,
+            opacity: 0
+        });
+        gsap.set('.text-column p', {
+            y: 30,
+            opacity: 0
+        });
+        gsap.set('.cta-button', {
+            scale: 0.8,
+            opacity: 0
+        });
+
+        // Main animation sequence
+        section5Tl
+            .to('.section5-content', {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: 'power2.out'
+            })
+            .to('.images-column', {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.5')
+            .to('.text-column', {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.5')
+            .to('.image-box', {
+                scale: 1,
+                opacity: 1,
+                rotationY: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: 'back.out(1.7)'
+            }, '-=0.5')
+            .to('.bottom-image img', {
+                scale: 1,
+                opacity: 1,
+                rotationY: 0,
+                duration: 0.8,
+                ease: 'back.out(1.7)'
+            }, '-=0.5')
+            .to('.text-column h2', {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: 'power2.out'
+            }, '-=0.5')
+            .to('.text-column p', {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: 'power2.out'
+            }, '-=0.5')
+            .to('.cta-button', {
+                scale: 1,
+                opacity: 1,
+                duration: 0.6,
+                ease: 'back.out(1.7)'
+            }, '-=0.3');
+
+        // Hover animations for images
+        const imageBoxes = document.querySelectorAll('.image-box');
+        imageBoxes.forEach(box => {
+            box.addEventListener('mouseenter', () => {
+                gsap.to(box, {
+                    scale: 1.05,
+                    rotationY: 5,
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            });
+
+            box.addEventListener('mouseleave', () => {
+                gsap.to(box, {
+                    scale: 1,
+                    rotationY: 0,
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            });
+        });
+
+        // Hover animation for bottom image
+        const bottomImage = document.querySelector('.bottom-image img');
+        if (bottomImage) {
+            bottomImage.addEventListener('mouseenter', () => {
+                gsap.to(bottomImage, {
+                    scale: 1.05,
+                    rotationY: 5,
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            });
+
+            bottomImage.addEventListener('mouseleave', () => {
+                gsap.to(bottomImage, {
+                    scale: 1,
+                    rotationY: 0,
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            });
         }
-    });
 
-    // Set initial states
-    gsap.set('.section5-content', { opacity: 0, y: 50 });
-    gsap.set('.images-column', { x: -100, opacity: 0 });
-    gsap.set('.text-column', { x: 100, opacity: 0 });
-    gsap.set('.image-box', { scale: 0.8, opacity: 0, rotationY: -30 });
-    gsap.set('.bottom-image img', { scale: 0.8, opacity: 0, rotationY: 30 });
-    gsap.set('.text-column h2', { y: 50, opacity: 0 });
-    gsap.set('.text-column p', { y: 30, opacity: 0 });
-    gsap.set('.cta-button', { scale: 0.8, opacity: 0 });
-
-    // Timeline animation
-    section5Tl
-        .to('.section5-content', { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out' })
-        .to('.images-column', { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.8')
-        .to('.text-column', { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, '-=0.8')
-        .to('.image-box', {
-            scale: 1, opacity: 1, rotationY: 0, duration: 0.8, stagger: 0.2, ease: 'back.out(1.7)'
-        }, '-=0.6')
-        .to('.bottom-image img', {
-            scale: 1, opacity: 1, rotationY: 0, duration: 0.8, ease: 'back.out(1.7)'
-        }, '-=0.6')
-        .to('.text-column h2', {
-            y: 0, opacity: 1, duration: 0.8, ease: 'power3.out'
-        }, '-=0.6')
-        .to('.text-column p', {
-            y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out'
-        }, '-=0.6')
-        .to('.cta-button', {
-            scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(1.7)'
-        }, '-=0.4');
-
-    // Hover effects
-    document.querySelectorAll('.image-box').forEach(box => {
-        box.addEventListener('mouseenter', () => {
-            gsap.to(box, {
-                scale: 1.05,
-                rotationY: 5,
-                duration: 0.3,
-                ease: 'power2.out'
+        // CTA button hover animation
+        const ctaButton = document.querySelector('.cta-button');
+        if (ctaButton) {
+            ctaButton.addEventListener('mouseenter', () => {
+                gsap.to(ctaButton, {
+                    scale: 1.05,
+                    backgroundColor: '#e0a420',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
             });
-        });
 
-        box.addEventListener('mouseleave', () => {
-            gsap.to(box, {
-                scale: 1,
-                rotationY: 0,
-                duration: 0.3,
-                ease: 'power2.out'
+            ctaButton.addEventListener('mouseleave', () => {
+                gsap.to(ctaButton, {
+                    scale: 1,
+                    backgroundColor: '#fcb426',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
             });
-        });
-    });
-
-    const bottomImage = document.querySelector('.bottom-image img');
-    if (bottomImage) {
-        bottomImage.addEventListener('mouseenter', () => {
-            gsap.to(bottomImage, {
-                scale: 1.05,
-                rotationY: 5,
-                duration: 0.3,
-                ease: 'power2.out'
-            });
-        });
-
-        bottomImage.addEventListener('mouseleave', () => {
-            gsap.to(bottomImage, {
-                scale: 1,
-                rotationY: 0,
-                duration: 0.3,
-                ease: 'power2.out'
-            });
-        });
+        }
     }
 
-    const ctaButton = document.querySelector('.cta-button');
-    if (ctaButton) {
-        ctaButton.addEventListener('mouseenter', () => {
-            gsap.to(ctaButton, {
-                scale: 1.05,
-                backgroundColor: '#e0a420',
-                duration: 0.3,
-                ease: 'power2.out'
-            });
+    // Testimonials Carousel Animation
+    const testimonialsSection = document.querySelector('.testimonials-section');
+    const testimonialTrack = document.querySelector('.testimonial-track');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+    if (testimonialsSection && testimonialCards.length > 0) {
+        let currentIndex = 0;
+        let isAnimating = false;
+        let autoRotateInterval;
+
+        // Animate section title
+        gsap.to('.section-title', {
+            scrollTrigger: {
+                trigger: testimonialsSection,
+                start: 'top center+=100',
+                end: 'bottom center',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            ease: 'power3.out'
         });
 
-        ctaButton.addEventListener('mouseleave', () => {
-            gsap.to(ctaButton, {
-                scale: 1,
-                backgroundColor: '#fcb426',
-                duration: 0.3,
-                ease: 'power2.out'
-            });
+        // Set initial state for all cards
+        gsap.set(testimonialCards, {
+            opacity: 0,
+            scale: 0.9,
+            rotationY: 20,
+            transformPerspective: 1000,
+            transformOrigin: "center center"
         });
+
+        // Create indicators
+        testimonialCards.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('carousel-indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        testimonialCards[0].classList.add('active');
+        animateCardIn(testimonialCards[0]);
+
+        function animateCardIn(card) {
+            const timeline = gsap.timeline();
+
+            timeline
+                .to(card, {
+                    opacity: 1,
+                    scale: 1,
+                    rotationY: 0,
+                    duration: 1.5,
+                    ease: 'power3.out'
+                })
+                .to(card.querySelector('.testimonial-image'), {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.2,
+                    ease: 'power2.out'
+                }, '-=0.8')
+                .to(card.querySelectorAll('.star'), {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: 'back.out(1.7)'
+                }, '-=0.6')
+                .to(card.querySelector('.testimonial-quote'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power2.out'
+                }, '-=0.4')
+                .to(card.querySelector('.testimonial-text'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power2.out'
+                }, '-=0.5')
+                .to(card.querySelector('.testimonial-author'), {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power2.out'
+                }, '-=0.5');
+        }
+
+        function animateCardOut(card) {
+            const timeline = gsap.timeline();
+
+            timeline
+                .to(card.querySelector('.testimonial-author'), {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.4,
+                    ease: 'power2.in'
+                })
+                .to(card.querySelector('.testimonial-text'), {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.4,
+                    ease: 'power2.in'
+                }, '-=0.2')
+                .to(card.querySelector('.testimonial-quote'), {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.4,
+                    ease: 'power2.in'
+                }, '-=0.2')
+                .to(card.querySelectorAll('.star'), {
+                    opacity: 0,
+                    scale: 0.5,
+                    duration: 0.3,
+                    stagger: 0.05,
+                    ease: 'power2.in'
+                }, '-=0.2')
+                .to(card.querySelector('.testimonial-image'), {
+                    opacity: 0,
+                    scale: 0.8,
+                    duration: 0.4,
+                    ease: 'power2.in'
+                }, '-=0.2')
+                .to(card, {
+                    opacity: 0,
+                    scale: 0.9,
+                    rotationY: 20,
+                    duration: 0.6,
+                    ease: 'power2.in'
+                }, '-=0.2');
+        }
+
+        function updateCarousel() {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            testimonialCards.forEach((card, index) => {
+                if (index === currentIndex) {
+                    card.classList.add('active');
+                    animateCardIn(card);
+                } else {
+                    card.classList.remove('active');
+                    animateCardOut(card);
+                }
+            });
+
+            indicators.forEach((indicator, index) => {
+                gsap.to(indicator, {
+                    backgroundColor: index === currentIndex ? '#fbbf24' : 'rgba(255,255,255,0.3)',
+                    scale: index === currentIndex ? 1.2 : 1,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+            });
+
+            const activeCard = testimonialCards[currentIndex];
+            const cardWidth = activeCard.offsetWidth;
+            const targetPosition = -currentIndex * (cardWidth + 40); // Adjust margin if needed
+
+            gsap.to(testimonialTrack, {
+                x: targetPosition,
+                duration: 1.2,
+                ease: 'power3.out',
+                onComplete: () => {
+                    isAnimating = false;
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            if (isAnimating) return;
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            if (isAnimating) return;
+            currentIndex = (currentIndex + 1) % testimonialCards.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            if (isAnimating) return;
+            currentIndex = (currentIndex - 1 + testimonialCards.length) % testimonialCards.length;
+            updateCarousel();
+        }
+
+        // Button event listeners
+        let debounceTimeout;
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                clearTimeout(debounceTimeout);
+                debounceTimeout = setTimeout(prevSlide, 100);
+            });
+        }
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                clearTimeout(debounceTimeout);
+                debounceTimeout = setTimeout(nextSlide, 100);
+            });
+        }
+
+        // Auto-rotation
+        function startAutoRotate() {
+            autoRotateInterval = setInterval(nextSlide, 10000);
+        }
+
+        function stopAutoRotate() {
+            clearInterval(autoRotateInterval);
+        }
+
+        setTimeout(startAutoRotate, 3000);
+        testimonialsSection.addEventListener('mouseenter', stopAutoRotate);
+        testimonialsSection.addEventListener('mouseleave', startAutoRotate);
+
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        testimonialTrack.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        testimonialTrack.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        function handleGesture() {
+            if (isAnimating) return;
+            const delta = touchEndX - touchStartX;
+            if (Math.abs(delta) > 50) {
+                if (delta > 0) {
+                    prevSlide();
+                } else {
+                    nextSlide();
+                }
+            }
+        }
     }
-
-
 }); 
