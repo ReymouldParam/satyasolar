@@ -1,0 +1,365 @@
+/* Media Queries for Responsive Design */
+
+/* 4K and Ultra HD Screens (2560px and above) */
+@media screen and (min-width: 2560px) {
+    .section1-container {
+        padding: 0 8rem;
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    .hero-text p {
+        font-size: 1.4rem;
+    }
+
+    .brochure-card {
+        width: 450px;
+    }
+
+    .service-card {
+        padding: 3rem;
+    }
+
+    .rooftop-card {
+        margin: 0 25px;
+    }
+
+    .testimonials-container {
+        max-width: 35%;
+    }
+
+    .section-title {
+        font-size: 4rem;
+    }
+}
+
+/* QHD/2K Screens (2048px and above) */
+@media screen and (min-width: 2048px) and (max-width: 2559px) {
+    .section1-container {
+        padding: 0 6rem;
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+
+    .brochure-card {
+        width: 400px;
+    }
+
+    .service-card {
+        padding: 2.5rem;
+    }
+
+    .rooftop-card {
+        margin: 0 20px;
+    }
+
+    .testimonials-container {
+        max-width: 40%;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Full HD Screens (1920x1080) */
+@media screen and (min-width: 1920px) and (max-width: 2047px) {
+    .section1-container {
+        padding: 0 5rem;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+
+    .brochure-card {
+        width: 380px;
+    }
+
+    .service-card {
+        padding: 2.2rem;
+    }
+
+    .rooftop-card {
+        margin: 0 18px;
+    }
+
+    .testimonials-container {
+        max-width: 45%;
+    }
+
+    .section-title {
+        font-size: 3.2rem;
+    }
+}
+
+/* HD+ Screens (1600x900) */
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+    .section1-container {
+        padding: 0 4rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .brochure-card {
+        width: 350px;
+    }
+
+    .service-card {
+        padding: 2rem;
+    }
+
+    .rooftop-card {
+        margin: 0 15px;
+    }
+
+    .testimonials-container {
+        max-width: 50%;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Mac Devices (1440x900) */
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+    .section1-container {
+        padding: 0 3.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.05rem;
+    }
+
+    .brochure-card {
+        width: 320px;
+    }
+
+    .service-card {
+        padding: 1.8rem;
+    }
+
+    .rooftop-card {
+        margin: 0 12px;
+    }
+
+    .testimonials-container {
+        max-width: 55%;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+}
+
+/* HD Screens (1366x768) */
+@media screen and (min-width: 1366px) and (max-width: 1439px) {
+    .section1-container {
+        padding: 0 3rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .brochure-card {
+        width: 300px;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .rooftop-card {
+        margin: 0 10px;
+    }
+
+    .testimonials-container {
+        max-width: 60%;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablet Devices (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .section1-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+    .hero-text {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .brochure-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .rooftop-card {
+        margin: 0 10px;
+    }
+
+    .testimonials-container {
+        max-width: 80%;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile Devices (768px and below) - Keep existing mobile styles */
+@media screen and (max-width: 768px) {
+    .main-header {
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .rooftop-card {
+        margin: 0 5px;
+    }
+
+    .testimonial-card {
+        padding: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small Mobile Devices (480px and below) - Keep existing small mobile styles */
+@media screen and (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.8rem;
+    }
+
+    .brochure-card {
+        width: 100%;
+    }
+
+    .service-card {
+        padding: 0.8rem;
+    }
+
+    .rooftop-card {
+        margin: 0;
+    }
+
+    .testimonial-card {
+        padding: 0.8rem;
+    }
+
+    .faq-item {
+        padding: 0.8rem;
+    }
+}
+
+/* Landscape Mode for Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .section1-container {
+        flex-direction: row;
+    }
+
+    .hero-text {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+
+    .brochure-card {
+        width: 250px;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img,
+    .brand-logo img,
+    .card-image img,
+    .testimonial-image img {
+        transform: scale(1.1);
+    }
+} 

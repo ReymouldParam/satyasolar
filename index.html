@@ -11,6 +11,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/home.css" />
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -30,6 +31,12 @@
                 <div class="logo">
                     <img src="./assets/images/Satya Solar Round logo (1) 1.svg" alt="Logo">
                 </div>
+                <!-- Hamburger Toggle for Mobile -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <nav class="nav-menu">
                     <ul>
                         <li class="active"><a href="#">Home</a></li>
@@ -39,6 +46,7 @@
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
+
                 </nav>
                 <div class="quote-button">
                     <a href="#" class="btn">GET QUOTE</a>
@@ -593,8 +601,8 @@
                     {
                         breakpoint: 1024,
                         settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
+                            slidesToShow: 4,
+                            slidesToScroll: 4,
                             infinite: true,
                             dots: true
                         }
