@@ -2597,17 +2597,3 @@
 }
 
 
-
-/* section7 Footer */
-.section7 {
-    background-color: #050505;
-    background-image: url('/assets/images/carousel-bg.png');
-    /* Add your grid background here */
-    background-size: cover;
-    background-position: center;
-    padding: 60px 20px;
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-}
