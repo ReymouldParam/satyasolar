@@ -6,6 +6,11 @@ body {
 }
 
 
+.intro-text{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
 .main-header {
     display: flex;
     align-items: center;
