@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    padding: 0.5%;
+    margin-top: 1%;
+}
+
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 90%;
+    margin: 40px auto;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+/* LEFT SECTION */
+.contact-left {
+    flex: 1;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    min-height: 600px;
+    margin: 15px;
+}
+
+.contact-overlay {
+    background:
+        linear-gradient(rgba(87, 163, 219, 0.5), rgba(87, 163, 219, 0.9)),
+        /* blue tint overlay */
+        url('../images/FIXING-SOLAR-PANEL.png') no-repeat center center;
+    background-size: cover;
+    padding: 40px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+
+.contact-left h2 {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.contact-left .highlight {
+    color: #fdbb17;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact-left .description {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.contact-row .icon {
+    background-color: #ffb100;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* RIGHT SECTION */
+.contact-right {
+    flex: 1;
+    background-color: #57a3db;
+    padding: 40px 30px;
+    color: #fff;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+.contact-right h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contact-right p {
+    font-size: 14px;
+    color: #e6f1fa;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right label {
+    font-size: 13px;
+    margin: 10px 0 5px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-right textarea {
+    resize: vertical;
+}
+
+.contact-right button {
+    background-color: #fca311;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.contact-right button:hover {
+    background-color: #e89600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        border-radius: 0 !important;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        min-height: auto;
+    }
+}

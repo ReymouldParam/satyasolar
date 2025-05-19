@@ -1,0 +1,131 @@
+body {
+    font-family: 'Heebo';
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    /* color: #111; */
+}
+
+h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    padding: 0.5%;
+    margin-top: 1%;
+}
+
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* ===== Residential Rooftops Section ===== */
+.residential-rooftops {
+    padding: 40px 6%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.right {
+    flex: 1;
+    max-width: 400px;
+}
+
+.right img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== Advantages Section ===== */
+.advantages {
+    background: url('../images/tesimonial-bg.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.advantages h2 {
+    font-size: 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+.advantages h2 span {
+    color: #FFD600;
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two fixed columns */
+    gap: 40px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90%;
+    /* Optional: center the grid with max width */
+}
+
+
+.adv-card {
+    display: flex;
+    align-items: flex-start;
+    background: transparent;
+    color: #000;
+    border-radius: 12px;
+    padding: 15px;
+    gap: 10px;
+    text-align: left;
+}
+
+.adv-card img {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.adv-card h4 {
+    margin: 0 0 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #F8A81B;
+}
+
+.adv-card p {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+    color: #fff;
+}

@@ -52,7 +52,7 @@ body {
 .subtitle {
     font-size: 18px;
     color: #777;
-    margin-bottom:5%;
+    margin-bottom: 5%;
 }
 
 .main-heading {
@@ -154,15 +154,27 @@ body {
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
+}
+
+.view-more span {
+    font-size: 16px;
+    transition: transform 0.3s ease;
 }
 
 .view-more:hover {
     background-color: #fca311;
     color: #fff;
+    text-decoration: none;
 }
+
+.view-more:hover span {
+    transform: translateX(4px);
+}
+
 
 @media (max-width: 1000px) {
     .product-cards {

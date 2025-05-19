@@ -226,7 +226,7 @@ body {
 .email-box button {
     background-color: #fcb426;
     border: none;
-    padding: 15px 25px;
+    padding: 10px 10px;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -235,6 +235,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 10px
 }
 
 .email-box button:hover {

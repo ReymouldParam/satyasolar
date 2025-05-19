@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    padding: 0.5%;
+    margin-top: 1%;
+}
+
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+
+
+.solar-services {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 500;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
