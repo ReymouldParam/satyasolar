@@ -25,7 +25,7 @@
 }
 
 .logo img {
-    height: 60px;
+    height: 100px;
     opacity: 0;
     transform: scale(0.8) rotate(-5deg);
     animation: logoReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.3s;
