@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     // Initial animations that should play immediately
     const initialAnimations = gsap.timeline();
-    
+
     // Section 5 initial animation
     initialAnimations
         .to('.section5', {
@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-}); 
+});
 
 //  FOR MOBILE HEADER
 document.addEventListener('DOMContentLoaded', () => {
@@ -545,3 +545,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// GET Quote Pop-up
+function openPopup() {
+    document.getElementById('quotePopup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('quotePopup').style.display = 'none';
+}

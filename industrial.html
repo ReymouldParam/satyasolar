@@ -30,18 +30,19 @@
                 <span></span>
             </div>
             <nav class="nav-menu">
-                <ul>
+               <ul>
                     <li class="active"><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About Us</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./gallary.html">Gallery</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
+
 
             </nav>
             <div class="quote-button">
-                <a href="#" class="btn">GET QUOTE</a>
+                   <a href="#" class="btn" onclick="openPopup()">GET QUOTE</a>
             </div>
         </header>
         <!-- Residential Rooftops -->
@@ -165,7 +166,48 @@
                 </div>
             </div>
         </section>
+
+        <!-- Quote Popup -->
+        <div class="quote-popup" id="quotePopup">
+            <div class="popup-content">
+                <div class="popup-image">
+                    <img src="assets/images/solar-panel-fixing.svg" alt="Solar Panel" />
+                </div>
+                <div class="popup-form">
+                    <div class="popup-header">
+                        <h2>LOGO</h2>
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                    </div>
+                    <h3>Available Government Subsidy</h3>
+                    <form>
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter Your Full Name" />
+
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="Enter Your Mobile Number" />
+
+                        <label>Your City</label>
+                        <select>
+                            <option>Select Your City</option>
+                            <option>Hyderabad</option>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                        </select>
+
+                        <label>Email Address</label>
+                        <input type="email" placeholder="@Gmail.Com" />
+
+                        <label>Message</label>
+                        <textarea placeholder="@Gmail.Com"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+     <!-- Custom Animations -->
+    <script src="assets/js/animations.js"></script>
 </body>
 
 </html>
