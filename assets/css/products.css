@@ -82,9 +82,10 @@ body {
 /* products section */
 .products-section {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0px auto;
     padding: 0 20px;
     text-align: center;
+    margin-bottom: 2%;
 }
 
 .intro-text {
@@ -105,7 +106,7 @@ body {
 .card {
     background-color: #fff;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     padding: 20px;
     flex: 1;
     max-width: 360px;
@@ -116,12 +117,13 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px #ffb100;
 }
 
 .card h3 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     font-weight: 700;
 }
 
