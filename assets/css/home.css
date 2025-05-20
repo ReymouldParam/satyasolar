@@ -72,15 +72,21 @@
 .promo-banner {
     background-color: white;
     color: #ffb100;
+    display: flex;
+    align-items: center;
     font-weight: bold;
     padding: 8px 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: fit-content;
-    align-self: center;
+    gap: 20px;
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     animation: bannerReveal 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.5s;
+}
+.sun-rotating {
+    height: 50px;
+    width: auto;
 }
 
 @keyframes bannerReveal {
