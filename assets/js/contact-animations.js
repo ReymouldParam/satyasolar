@@ -2,6 +2,17 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // --------------------
+// INITIAL PAGE LOAD - HEADER
+// --------------------
+const pageLoadTimeline = gsap.timeline();
+pageLoadTimeline.from(".main-header", {
+    duration: 1.2,
+    y: -120,
+    opacity: 0,
+    ease: "bounce.out"
+});
+
+// --------------------
 // CONTACT SECTION ANIMATIONS
 // --------------------
 const contactTimeline = gsap.timeline({
@@ -18,20 +29,20 @@ contactTimeline.from(".contact-right", {
     opacity: 0,
     ease: "power3.out"
 })
-.from(".contact-right form", {
-    duration: 0.6,
-    y: 30,
-    opacity: 0,
-    stagger: 0.1,
-    ease: "power2.out"
-}, "-=0.4")
-.from(".contact-right input, .contact-right textarea", {
-    duration: 0.4,
-    y: 20,
-    opacity: 0,
-    stagger: 0.05,
-    ease: "power2.out"
-}, "-=0.3");
+    .from(".contact-right form", {
+        duration: 0.6,
+        y: 30,
+        opacity: 0,
+        stagger: 0.1,
+        ease: "power2.out"
+    }, "-=0.4")
+    .from(".contact-right input, .contact-right textarea", {
+        duration: 0.4,
+        y: 20,
+        opacity: 0,
+        stagger: 0.05,
+        ease: "power2.out"
+    }, "-=0.3");
 
 // Contact info animation
 gsap.from(".contact-left", {
@@ -145,9 +156,9 @@ gsap.from(".footer-container", {
 function openPopup() {
     const popup = document.getElementById("quotePopup");
     popup.style.display = "flex";
-    
+
     const popupTimeline = gsap.timeline();
-    
+
     popupTimeline
         .from(".popup-content", {
             duration: 0.6,
@@ -178,7 +189,7 @@ function openPopup() {
 // }
 
 // Initialize animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Refresh ScrollTrigger to ensure proper initialization
     ScrollTrigger.refresh();
 }); 

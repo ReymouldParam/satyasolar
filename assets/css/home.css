@@ -1,7 +1,50 @@
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background: rgba(0, 0, 0, 0.4);
+    /* semi-transparent black */
+    padding: 2px;
+
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 87%;
+    margin: 0 auto;
+
+    z-index: 999;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Add class for scrolled state */
+.main-header.scrolled {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 30px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+
 .section1 {
     background: url('../images/sectyion-bg.png') no-repeat center center / cover;
     border-radius: 60px;
-    padding: 40px;
+    padding: 60px;
     margin: 40px auto;
     position: relative;
     max-width: 95%;
@@ -11,6 +54,7 @@
     transform: perspective(1000px) translateY(30px) rotateX(5deg);
     animation: section1Reveal 2.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
 
 @keyframes section1Reveal {
     0% {
@@ -24,12 +68,12 @@
     }
 }
 
-.logo img {
+/* .logo img {
     height: 100px;
     opacity: 0;
     transform: scale(0.8) rotate(-5deg);
     animation: logoReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.3s;
-}
+} */
 
 @keyframes logoReveal {
     0% {
@@ -84,6 +128,7 @@
     transform: translateY(20px) scale(0.95);
     animation: bannerReveal 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.5s;
 }
+
 .sun-rotating {
     height: 50px;
     width: auto;
@@ -382,6 +427,36 @@
     color: white;
 }
 
+@media screen and (max-width:1366px) {
+    .section1-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    /* BROCHURE */
+    .brochure-card {
+        flex: 1 1 100%;
+        background-color: #3e3e3e;
+        border-radius: 25px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        max-width: 300px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: perspective(1000px) translateX(30px) rotateY(-5deg);
+        animation: cardReveal 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.9s;
+    }
+}
 
 /* Mobile Styles (max-width: 768px) */
 @media screen and (max-width: 768px) {
@@ -2601,5 +2676,3 @@
         transform: scale(1.2);
     }
 }
-
-

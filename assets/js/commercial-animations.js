@@ -1,6 +1,18 @@
 // Initialize GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+
+// --------------------
+// INITIAL PAGE LOAD - HEADER
+// --------------------
+const pageLoadTimeline = gsap.timeline();
+pageLoadTimeline.from(".main-header", {
+    duration: 1.2,
+    y: -120,
+    opacity: 0,
+    ease: "bounce.out"
+});
+
 // --------------------
 // COMMERCIAL ROOFTOPS SECTION ANIMATIONS
 // --------------------
