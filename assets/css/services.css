@@ -10,10 +10,9 @@ body {
     align-items: center;
     justify-content: space-around;
     background: transparent;
-    padding: 0.5%;
+    padding: 0.5% 2%;
     margin-bottom: 1%;
 }
-
 
 .nav-menu ul li a {
     text-decoration: none;
@@ -21,8 +20,6 @@ body {
     font-weight: 600;
     transition: color 0.3s;
 }
-
-
 
 .solar-services {
     padding: 40px 20px;
@@ -68,7 +65,7 @@ body {
 
 .card-overlay h3 {
     margin: 0 0 8px;
-    font-size:24px;
+    font-size: 24px;
     color: #0073e6;
 }
 
@@ -77,4 +74,236 @@ body {
     font-size: 16px;
     color: #333;
     line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    .main-header {
+        background: transparent;
+        padding: 0.5% 2%;
+        margin-bottom: 1%;
+    }
+
+    .solar-services {
+        padding: 20px 15px;
+    }
+
+    .intro-text {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 20px;
+        margin-top: 60px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .card-overlay {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .card-overlay h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card-overlay p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 80px 20px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu ul li a {
+        color: black;
+        font-size: 16px;
+        display: block;
+        padding: 10px;
+    }
+
+    .quote-button {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .mobile-only .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* HD Screens (1366x768) */
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+    .solar-services {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 50px;
+    }
+
+    .intro-text {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 25px;
+    }
+
+    .intro-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .intro-text p {
+        font-size: 1.1rem;
+    }
+
+    .service-grid {
+        max-width: 1200px;
+        margin: 40px auto;
+        gap: 30px;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-card p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Full HD Screens (1920x1080) */
+@media screen and (min-width: 1920px) {
+    .solar-services {
+        max-width: 1600px;
+        margin: 50px auto;
+        padding: 60px;
+    }
+
+    .intro-text {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 50px 30px;
+    }
+
+    .intro-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .intro-text p {
+        font-size: 1.2rem;
+    }
+
+    .service-grid {
+        max-width: 1600px;
+        margin: 50px auto;
+        gap: 40px;
+    }
+
+    .service-card {
+        padding: 40px;
+    }
+
+    .service-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .service-card p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mac Devices */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+    .solar-services {
+        max-width: 1400px;
+        margin: 45px auto;
+        padding: 55px;
+    }
+
+    .intro-text {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 45px 28px;
+    }
+
+    .intro-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text p {
+        font-size: 1.15rem;
+    }
+
+    .service-grid {
+        max-width: 1400px;
+        margin: 45px auto;
+        gap: 35px;
+    }
+
+    .service-card {
+        padding: 35px;
+    }
+
+    .service-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-card p {
+        font-size: 1.15rem;
+    }
+}
+
+/* Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .solar-services {
+        background-image: url('../images/services-bg.png');
+        background-size: cover;
+    }
 }

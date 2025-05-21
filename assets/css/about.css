@@ -10,17 +10,26 @@ body {
     align-items: center;
     justify-content: space-around;
     background: transparent;
-    padding: 0.5%;
+    padding: 0.5% 2%;
     margin-bottom: 1%;
 }
 
 
 .nav-menu ul li a {
     text-decoration: none;
-    color: black;
+    color: #000000;
     font-weight: 600;
     transition: color 0.3s;
 }
+
+/* .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    padding: 0.5%;
+    margin-bottom: 1%;
+} */
 
 
 .our-story {
@@ -75,6 +84,83 @@ body {
     border-radius: 20px;
     object-fit: cover;
     margin-right: -40px;
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    .our-story {
+        flex-direction: column;
+        padding: 30px 20px;
+        /* margin: 40px 15px; */
+        border-radius: 20px;
+        gap: 20px;
+        margin-top: 15% !important;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .headline {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-top: 15px;
+        line-height: 1.5;
+    }
+
+    .image-container {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .image-container img {
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        margin: 0;
+        border-radius: 15px;
+        object-fit: contain;
+        margin-right: -55%;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-story {
+        padding: 20px 15px;
+        margin: 15px 10px;
+        border-radius: 15px;
+    }
+
+    .headline {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .image-container img {
+        height: 200px;
+    }
 }
 
 /* section2 */
@@ -292,4 +378,123 @@ body {
     line-height: 1.6;
     margin: 0;
     text-align: left;
+}
+
+/* HD Screens (1366x768) */
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+    .about-hero {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 50px;
+    }
+
+    .about-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 25px;
+    }
+
+    .about-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+
+    .our-story {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 40px;
+    }
+
+    .our-story h2 {
+        font-size: 2.2rem;
+    }
+
+    .our-story p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Full HD Screens (1920x1080) */
+@media screen and (min-width: 1920px) {
+    .about-hero {
+        max-width: 1600px;
+        margin: 50px auto;
+        padding: 60px;
+    }
+
+    .about-content {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 50px 30px;
+    }
+
+    .about-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .about-text p {
+        font-size: 1.2rem;
+    }
+
+    .our-story {
+        max-width: 1600px;
+        margin: 50px auto;
+        padding: 50px;
+    }
+
+    .our-story h2 {
+        font-size: 2.8rem;
+    }
+
+    .our-story p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mac Devices */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+    .about-hero {
+        max-width: 1400px;
+        margin: 45px auto;
+        padding: 55px;
+    }
+
+    .about-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 45px 28px;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p {
+        font-size: 1.15rem;
+    }
+
+    .our-story {
+        max-width: 92%;
+        margin: 45px auto;
+        padding: 45px;
+    }
+
+    .our-story h2 {
+        font-size: 2.5rem;
+    }
+
+    .our-story p {
+        font-size: 1.15rem;
+    }
+}
+
+/* Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .about-hero {
+        background-image: url('../images/about-bg.png');
+        background-size: cover;
+    }
 }

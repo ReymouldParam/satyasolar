@@ -260,18 +260,6 @@
 
 /* Mobile Devices (768px and below) - Keep existing mobile styles */
 @media screen and (max-width: 768px) {
-    .main-header {
-        padding: 1rem;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .nav-menu.active {
-        display: block;
-    }
-
     .hero-text h1 {
         font-size: 2rem;
     }
@@ -301,7 +289,8 @@
         flex-direction: column;
     }
 
-    .footer-left, .footer-right {
+    .footer-left,
+    .footer-right {
         width: 100%;
         margin-bottom: 2rem;
     }
@@ -355,11 +344,13 @@
 }
 
 /* High DPI Screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
     .logo img,
     .brand-logo img,
     .card-image img,
     .testimonial-image img {
         transform: scale(1.1);
     }
-} 
+}

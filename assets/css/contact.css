@@ -6,11 +6,12 @@ body {
 }
 
 
-.intro-text{
+.intro-text {
     text-align: center;
     width: 80%;
     margin: auto;
 }
+
 .main-header {
     display: flex;
     align-items: center;
@@ -186,5 +187,157 @@ body {
     .contact-right {
         width: 100%;
         min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    .intro-text {
+        width: 100%;
+        padding: 0 15px;
+        font-size: 14px;
+        margin: 20px 0;
+        margin-top: 22%;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 0 15px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        margin: 0 0 20px 0;
+        min-height: auto;
+    }
+
+    .contact-overlay {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .contact-left h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .contact-left .highlight {
+        font-size: 20px;
+    }
+
+    .contact-left .description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .contact-row {
+        margin-bottom: 15px;
+    }
+
+    .contact-row .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .contact-right {
+        padding: 30px 20px;
+        border-radius: 15px !important;
+    }
+
+    .contact-right h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .contact-right p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .contact-right form {
+        gap: 10px;
+    }
+
+    .contact-right label {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .contact-right button {
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    /* Adjust header for mobile */
+    .main-header {
+        padding: 10px 15px;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    /* Adjust navigation for mobile */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 80px 20px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu ul li a {
+        color: white;
+        font-size: 16px;
+        display: block;
+        padding: 10px;
+    }
+
+    /* Adjust quote button for mobile */
+    .quote-button {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .mobile-only .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
     }
 }

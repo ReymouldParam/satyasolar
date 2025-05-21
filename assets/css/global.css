@@ -86,20 +86,39 @@ body {
         display: none;
     }
 
+    .main-header{
+        margin-top: -20px !important;
+        padding: 2px !important;
+    }
+    /* Add padding to body to prevent content from hiding under fixed header */
+    body {
+        padding-top: 0;
+    }
+
+    /* .logo {
+        padding-left: 15px;
+    }
+
+    .logo img {
+        height: 35px;
+    } */
+
     .hamburger {
         display: flex;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
         z-index: 999;
+        padding: 10px 15px;
     }
 
     .hamburger span {
         height: 3px;
         width: 25px;
-        background: white;
         border-radius: 5px;
-        transition: 0.3s;
+        transition: all 0.3s ease;
+        background: #000000;
+        margin-right: 20px;
     }
 
     /* Hamburger into X */
@@ -116,39 +135,123 @@ body {
     }
 
     .nav-menu {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 50%;
-        /* margin-left: auto !important; */
-        background-color: #222;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
         display: flex;
         flex-direction: column;
-        border-radius: 20px;
         align-items: center;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
-        z-index: 5;
-        margin-left: 50%;
+        padding: 20px 10px;
+        transition: right 0.3s ease-in-out;
+        z-index: 998;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0;
     }
 
     .nav-menu.active {
-        max-height: 500px;
-        /* Adjust as needed */
-        padding: 20px 0;
-        /* margin-left: 40; */
+        right: 0;
+        margin-top: 14%;
     }
 
     .nav-menu ul {
         flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+        color: white;
+    }
+
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 997;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    /* Adjust section spacing for mobile */
+    section {
+        padding: 20px 15px;
+        margin: 0;
+    }
+
+    /* Adjust container widths */
+    .container,
+    .section1-container,
+    .footer-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Adjust grid layouts */
+    .service-grid,
+    .advantage-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    .main-header {
-        flex-wrap: wrap;
-        position: relative;
+    /* Adjust card layouts */
+    .service-card,
+    .stat-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Adjust text sizes */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+
+    /* Adjust button sizes */
+    .btn,
+    .btn-primary,
+    .btn-outline {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust image sizes */
+    img {
+        max-width: 100%;
+        height: auto;
+        /* margin-bottom: 20px !important;
+        padding: 10px; */
+    }
+
+    .logo img {
+        height: 40px;
+        margin-top: 15px;
+
     }
 }
 
@@ -158,7 +261,6 @@ body {
 .section7 {
     background-color: #050505;
     background-image: url('/assets/images/carousel-bg.png');
-    /* Add your grid background here */
     background-size: cover;
     background-position: center;
     padding: 60px 20px;
@@ -175,7 +277,6 @@ body {
     max-width: 1200px;
     margin: auto;
     justify-content: space-between;
-    background-image: url('../images/carousel-bg.png');
 }
 
 .footer-left,
@@ -235,16 +336,13 @@ body {
 .email-box button {
     background-color: #fcb426;
     border: none;
-    padding: 10px 10px;
+    padding: 10px 20px;
     color: white;
     font-weight: bold;
     cursor: pointer;
     border-radius: 30px;
     transition: background 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px
+    margin: 10px;
 }
 
 .email-box button:hover {
@@ -268,31 +366,104 @@ body {
     line-height: 1.5;
 }
 
-/* FOR MOBILE  */
+/* Mobile Footer Styles */
 @media (max-width: 768px) {
+    .section7 {
+        padding: 30px 15px;
+        border-radius: 30px 30px 0 0;
+    }
+
     .footer-container {
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .footer-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-left p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .map-box {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .footer-right h3 {
+        font-size: 1.2rem;
+    }
+
+    .email-box {
+        flex-direction: column;
+        background: none;
+        gap: 10px;
+    }
+
+    .email-box input {
+        width: 100%;
+        background: #222;
+        border-radius: 25px;
+    }
+
+    .email-box button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-info p,
+    .office-address p {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section7 {
+        padding: 30px 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .footer-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-left p {
+        font-size: 0.9rem;
+    }
+
+    .footer-right h3 {
+        font-size: 1.2rem;
+    }
+
+    .email-box input {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        border-radius: 0;
         text-align: center;
     }
 
     .email-box button {
-        background-color: #fcb426;
-        border: none;
         padding: 5px;
-        color: white;
-        font-weight: bold;
-        /* font-size: 12px; */
-        cursor: pointer;
-        border-radius: 30px;
-        transition: background 0.3s;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        font-size: 14px;
+        border-radius: 0;
+        font-weight: 400;
     }
 
+    .contact-info p,
+    .office-address p {
+        font-size: 0.85rem;
+    }
 }
-
 
 /* Popup Base */
 .quote-popup {
@@ -419,5 +590,195 @@ body {
 
     .popup-form {
         border-radius: 0 0 16px 16px;
+    }
+}
+
+/* HD Screens (1366x768) */
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+    .container,
+    .section1-container,
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .main-header {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .nav-menu ul {
+        gap: 25px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .quote-button .btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Full HD Screens (1920x1080) */
+@media screen and (min-width: 1920px) {
+    .container,
+    .section1-container,
+    .footer-container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .main-header {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .nav-menu ul {
+        gap: 35px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.1rem;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .quote-button .btn {
+        padding: 10px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Mac Devices */
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+    .container,
+    .section1-container,
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    .main-header {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 0;
+        /* margin-top: 20px !important; */
+    }
+
+    .nav-menu ul {
+        gap: 30px;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.05rem;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    .quote-button .btn {
+        padding: 9px 22px;
+        font-size: 1rem;
+    }
+
+    /* Section adjustments */
+    section {
+        padding:0px 0;
+    }
+
+    /* Grid adjustments */
+    .service-grid,
+    .advantage-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* Card adjustments */
+    .service-card,
+    .stat-card {
+        padding: 30px;
+        margin: 0;
+    }
+
+    /* Text adjustments */
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    /* Button adjustments */
+    .btn,
+    .btn-primary,
+    .btn-outline {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+
+    /* Image adjustments */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        gap: 50px;
+    }
+
+    .footer-left h2 {
+        font-size: 2.2rem;
+    }
+
+    .footer-left p {
+        font-size: 1.1rem;
+    }
+
+    .footer-right h3 {
+        font-size: 1.6rem;
+    }
+
+    .email-box input {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+
+    .email-box button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img,
+    .service-card img,
+    .testimonial-image img {
+        image-rendering: -webkit-optimize-contrast;
     }
 }
