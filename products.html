@@ -79,8 +79,8 @@
                 <!-- Card 1 -->
                 <div class="card">
                     <div class="card-title-sun">
-                    <img src="assets/images/sun-rotating-animation.gif" alt="Solar Panel" class="sun-rotating"/>
-                    <h3>  Residential Rooftops</h3>
+                        <img src="assets/images/sun-rotating-animation.gif" alt="Solar Panel" class="sun-rotating" />
+                        <h3> Residential Rooftops</h3>
                     </div>
                     <div class="image-container">
                         <img src="assets/images/card1-img.png" alt="Residential Rooftops" />
@@ -97,8 +97,8 @@
                 <!-- Card 2 -->
                 <div class="card">
                     <div class="card-title-sun">
-                    <img src="assets/images/sun-rotating-animation.gif" alt="Solar Panel" class="sun-rotating"/>
-                    <h3>  Industrial Rooftops</h3>
+                        <img src="assets/images/sun-rotating-animation.gif" alt="Solar Panel" class="sun-rotating" />
+                        <h3> Industrial Rooftops</h3>
                     </div>
                     <div class="image-container">
                         <img src="assets/images/card2-img.png" alt="Industrial Rooftops" />
@@ -114,9 +114,9 @@
 
                 <!-- Card 3 -->
                 <div class="card">
-                     <div class="card-title-sun">
-                    <img src="assets/images/sun-rotating-animation.gif" alt="Solar Panel" class="sun-rotating"/>
-                    <h3>  Commercial Rooftops</h3>
+                    <div class="card-title-sun">
+                        <img src="assets/images/sun-rotating-animation.gif" alt="Solar Panel" class="sun-rotating" />
+                        <h3> Commercial Rooftops</h3>
                     </div>
                     <div class="image-container">
                         <img src="assets/images/card3-img.png" alt="Commercial Rooftops" />
@@ -152,12 +152,13 @@
                 <!-- Right: Services & Contact -->
                 <div class="footer-right">
                     <h3>With Our Exclusive Services</h3>
-                    <div class="email-box">
-                        <input type="email" placeholder="Enter Your Email">
-                        <button>
+                    <form action="footer.php" method="POST">
+                        <input name="email" type="email" placeholder="Enter Your Email">
+                        <button type="submit">
                             Get a free Quote <span>&#10132;</span>
                         </button>
-                    </div>
+                    </form>
+
 
                     <div class="contact-info">
                         <p><strong>Phone:</strong> (302) 533 2345</p>
@@ -211,6 +212,12 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <!-- popup -->
+        <div id="popup-message" class="popup">
+            <h2 id="popup-heading" class="pop-up-heading"></h2>
+            <p id="popup-para" class="pop-up-para"></p>
+            <button id="close-popup" class="close-btn">Close</button>
         </div>
     </div>
     <!-- Custom Animations -->

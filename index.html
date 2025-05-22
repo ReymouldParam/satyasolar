@@ -554,12 +554,12 @@
                 <!-- Right: Services & Contact -->
                 <div class="footer-right">
                     <h3>With Our Exclusive Services</h3>
-                    <div class="email-box">
-                        <input type="email" placeholder="Enter Your Email">
-                        <button>
+                    <form action="footer.php" method="POST">
+                        <input name="email" type="email" placeholder="Enter Your Email">
+                        <button type="submit">
                             Get a free Quote <span>&#10132;</span>
                         </button>
-                    </div>
+                    </form>
 
                     <div class="contact-info">
                         <p><strong>Phone:</strong> (302) 533 2345</p>
@@ -576,6 +576,12 @@
                 </div>
             </div>
         </section>
+        <!-- popup -->
+        <div id="popup-message" class="popup">
+            <h2 id="popup-heading" class="pop-up-heading"></h2>
+            <p id="popup-para" class="pop-up-para"></p>
+            <button id="close-popup" class="close-btn">Close</button>
+        </div>
         <!-- Quote Popup -->
         <div class="quote-popup" id="quotePopup">
             <div class="popup-content">
@@ -588,15 +594,15 @@
                         <span class="close-btn" onclick="closePopup()">&times;</span>
                     </div>
                     <h3>Available Government Subsidy</h3>
-                    <form>
+                    <form action="quote.php" method="POST">
                         <label>Full Name</label>
-                        <input type="text" placeholder="Enter Your Full Name" />
+                        <input name="name" type="text" placeholder="Enter Your Full Name" />
 
                         <label>Phone Number</label>
-                        <input type="text" placeholder="Enter Your Mobile Number" />
+                        <input name="number" type="number" placeholder="Enter Your Mobile Number" />
 
                         <label>Your City</label>
-                        <select>
+                        <select name="city">
                             <option>Select Your City</option>
                             <option>Hyderabad</option>
                             <option>Delhi</option>
@@ -604,10 +610,10 @@
                         </select>
 
                         <label>Email Address</label>
-                        <input type="email" placeholder="@Gmail.Com" />
+                        <input name="email" type="email" placeholder="@Gmail.Com" />
 
                         <label>Message</label>
-                        <textarea placeholder="@Gmail.Com"></textarea>
+                        <textarea name="message" placeholder="@Gmail.Com"></textarea>
 
                         <button type="submit">Submit</button>
                     </form>

@@ -99,10 +99,11 @@ body {
         display: none;
     }
 
-    .main-header{
+    .main-header {
         margin-top: -20px !important;
         padding: 2px !important;
     }
+
     /* Add padding to body to prevent content from hiding under fixed header */
     body {
         padding-top: 0;
@@ -275,6 +276,92 @@ body {
 
 
 /* FOOTER  */
+
+/* pop up card */
+.popup {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 500px;
+    background-color: #ffffff;
+    background-image: url(../images/Background.png);
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    padding: 30px 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    z-index: 1000;
+    text-align: center;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+/* Heading */
+.pop-up-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffb100;
+    /* Theme orange */
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.pop-up-para {
+    color: #000;
+    /* Olive green */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Button */
+.close-btn {
+    background-color: #ffb100;
+    /* Olive green */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.close-btn:hover {
+    background-color: #004080;
+}
+
+
+
+@media (max-width: 600px) {
+    .popup {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .pop-up-heading {
+        font-size: 28px;
+    }
+
+    .pop-up-para {
+        font-size: 16px;
+    }
+
+    .close-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
 /* section7 Footer */
 .section7 {
     background-color: #050505;
@@ -613,6 +700,7 @@ body {
 
 /* HD Screens (1366x768) */
 @media screen and (min-width: 1366px) and (max-width: 1919px) {
+
     .container,
     .section1-container,
     .footer-container {
@@ -646,6 +734,7 @@ body {
 
 /* Full HD Screens (1920x1080) */
 @media screen and (min-width: 1920px) {
+
     .container,
     .section1-container,
     .footer-container {
@@ -679,6 +768,7 @@ body {
 
 /* Mac Devices */
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
+
     .container,
     .section1-container,
     .footer-container {
@@ -713,7 +803,7 @@ body {
 
     /* Section adjustments */
     section {
-        padding:0px 0;
+        padding: 0px 0;
     }
 
     /* Grid adjustments */
@@ -793,7 +883,9 @@ body {
 }
 
 /* Retina Displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
     .logo img,
     .service-card img,
     .testimonial-image img {

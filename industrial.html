@@ -34,7 +34,7 @@
                 <span></span>
             </div>
             <nav class="nav-menu">
-               <ul>
+                <ul>
                     <li class="active"><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About Us</a></li>
                     <li><a href="./products.html">Products</a></li>
@@ -46,7 +46,7 @@
 
             </nav>
             <div class="quote-button">
-                   <a href="#" class="btn" onclick="openPopup()">GET QUOTE</a>
+                <a href="#" class="btn" onclick="openPopup()">GET QUOTE</a>
             </div>
         </header>
         <!-- Residential Rooftops -->
@@ -148,12 +148,12 @@
                 <!-- Right: Services & Contact -->
                 <div class="footer-right">
                     <h3>With Our Exclusive Services</h3>
-                    <div class="email-box">
-                        <input type="email" placeholder="Enter Your Email">
-                        <button>
+                    <form action="footer.php" method="POST">
+                        <input name="email" type="email" placeholder="Enter Your Email">
+                        <button type="submit">
                             Get a free Quote <span>&#10132;</span>
                         </button>
-                    </div>
+                    </form>
 
                     <div class="contact-info">
                         <p><strong>Phone:</strong> (302) 533 2345</p>
@@ -170,6 +170,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- popup -->
+        <div id="popup-message" class="popup">
+            <h2 id="popup-heading" class="pop-up-heading"></h2>
+            <p id="popup-para" class="pop-up-para"></p>
+            <button id="close-popup" class="close-btn">Close</button>
+        </div>
 
         <!-- Quote Popup -->
         <div class="quote-popup" id="quotePopup">
@@ -210,7 +217,7 @@
             </div>
         </div>
     </div>
-     <!-- Custom Animations -->
+    <!-- Custom Animations -->
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/industrial-animations.js"></script>
 </body>

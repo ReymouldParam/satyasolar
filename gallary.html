@@ -103,12 +103,13 @@
                 <!-- Right: Services & Contact -->
                 <div class="footer-right">
                     <h3>With Our Exclusive Services</h3>
-                    <div class="email-box">
-                        <input type="email" placeholder="Enter Your Email">
-                        <button>
+                    <form action="footer.php" method="POST">
+                        <input name="email" type="email" placeholder="Enter Your Email">
+                        <button type="submit">
                             Get a free Quote <span>&#10132;</span>
                         </button>
-                    </div>
+                    </form>
+
 
                     <div class="contact-info">
                         <p><strong>Phone:</strong> (302) 533 2345</p>
@@ -125,6 +126,12 @@
                 </div>
             </div>
         </section>
+        <!-- popup -->
+        <div id="popup-message" class="popup">
+            <h2 id="popup-heading" class="pop-up-heading"></h2>
+            <p id="popup-para" class="pop-up-para"></p>
+            <button id="close-popup" class="close-btn">Close</button>
+        </div>
         <!-- Quote Popup -->
         <div class="quote-popup" id="quotePopup">
             <div class="popup-content">
