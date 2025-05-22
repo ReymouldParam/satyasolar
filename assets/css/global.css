@@ -84,6 +84,13 @@ body {
     color: #ffb100;
 }
 
+@media (max-width: 768px) {
+    .nav-menu ul li.active a::after {
+        display: none;
+    }
+}
+
+
 .quote-button .btn {
     background-color: #ffb100;
     color: white;
@@ -785,7 +792,7 @@ body {
     .nav-menu ul li a {
         font-size: 1rem;
     }
- 
+
     .logo img {
         height: 60px;
         width: 100%;
