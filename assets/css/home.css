@@ -2271,6 +2271,9 @@
     z-index: 2;
 }
 
+
+
+
 /* Responsiveness */
 
 /* Mobile Screens (Up to 768px) */
@@ -2363,6 +2366,21 @@
     .carousel-indicator {
         width: 8px;
         height: 8px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        font-size: 10px;
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .swiper-button-prev {
+        left: 5px;
+    }
+
+    .swiper-button-next {
+        right: 5px;
     }
 }
 
