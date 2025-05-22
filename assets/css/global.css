@@ -57,13 +57,28 @@ body {
 .nav-menu ul li.active a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ffb100;
-    border-radius: 2px;
+    bottom: 24PX;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffb100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 0l1.8-1.79 1.41 1.41-1.79 1.8-1.42-1.42zM12 4V1h-1v3h1zm5 8a5 5 0 11-10 0 5 5 0 0110 0zm6 1h-3v-1h3v1zm-2.05 5.05l1.79 1.8-1.41 1.41-1.8-1.79 1.42-1.42zm-15.9 0l-1.8 1.79 1.41 1.41 1.8-1.79-1.42-1.42zM12 20v3h1v-3h-1zm-9-8H0v1h3v-1zm2.05 5.05L4.26 18.9l1.41 1.41 1.79-1.8-1.42-1.42z"/></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: rotate-sun 9s linear infinite;
 }
+
+@keyframes rotate-sun {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+
 
 .nav-menu ul li a:hover {
     color: #ffb100;
@@ -471,6 +486,23 @@ body {
     line-height: 1.5;
 }
 
+.contact-info i,
+.office-address i {
+    color: #ffb100;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 20px;
+}
+
+.contact-info p,
+.office-address p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
 /* Mobile Footer Styles */
 @media (max-width: 768px) {
     .section7 {
@@ -680,6 +712,38 @@ body {
 .popup-form button:hover {
     background-color: #e89600;
 }
+
+
+/********************* whatsapp container */
+.whatsapp-container {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    right: 3%;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.whatsapp-container i {
+    font-size: 40px;
+    color: #25D366;
+    display: inline-block;
+    animation: whatsappbeat 1.5s infinite;
+}
+
+@keyframes whatsappbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

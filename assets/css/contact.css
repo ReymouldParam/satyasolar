@@ -35,7 +35,8 @@ body {
     border-radius: 20px;
     overflow: hidden;
     max-width: 90%;
-    margin: 40px auto;
+    margin: 20px auto;
+    height: fit-content;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
 }
 
@@ -55,7 +56,7 @@ body {
         /* blue tint overlay */
         url('../images/FIXING-SOLAR-PANEL.png') no-repeat center center;
     background-size: cover;
-    padding: 40px 30px;
+    padding:0px 30px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -111,7 +112,7 @@ body {
 .contact-right {
     flex: 1;
     background-color: #57a3db;
-    padding: 40px 30px;
+    padding: 15px 30px;
     color: #fff;
     margin: 15px;
     border-radius: 20px;
