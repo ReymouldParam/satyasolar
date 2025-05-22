@@ -785,9 +785,10 @@ body {
     .nav-menu ul li a {
         font-size: 1rem;
     }
-
+ 
     .logo img {
-        height: 50px;
+        height: 60px;
+        width: 100%;
     }
 
     .quote-button .btn {
