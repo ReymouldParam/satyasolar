@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: space-around;
 
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+    /* white with 40% opacity */
+
     /* semi-transparent black */
     padding: 2px;
 
@@ -11,7 +13,7 @@
     top: 50px;
     left: 0;
     right: 0;
-    width: 87%;
+    width: 85%;
     margin: 0 auto;
 
     z-index: 999;
@@ -38,13 +40,13 @@
     width: 100%;
     top: 0;
     border-radius: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     padding: 10px 30px;
 }
 
 .nav-menu ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-weight: 600;
     transition: color 0.3s;
     position: relative;
@@ -146,6 +148,7 @@
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     animation: bannerReveal 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.5s;
+    margin-top: 10px;
 }
 
 .sun-rotating {
@@ -2646,7 +2649,13 @@
         max-width: 90%;
         margin: 30px auto;
         padding: 60px;
-        padding-top: 10%;
+        padding-top: 7%;
+    }
+
+    .promo-banner {
+        height: 100px;
+        /* margin-top: -20px; */
+        margin-bottom: 25px;
     }
 
     .hero-text {

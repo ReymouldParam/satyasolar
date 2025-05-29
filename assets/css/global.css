@@ -31,7 +31,7 @@ body {
 }
 
 .logo img {
-    height: 90px;
+    height: 60px;
 }
 
 .nav-menu ul {
@@ -796,6 +796,7 @@ body {
     .logo img {
         height: 60px;
         width: 100%;
+        padding: 5px;
     }
 
     .quote-button .btn {
@@ -830,6 +831,7 @@ body {
 
     .logo img {
         height: 60px;
+        padding: 10px;
     }
 
     .quote-button .btn {
@@ -924,6 +926,7 @@ body {
     img {
         max-width: 100%;
         height: auto;
+        /* margin-left: 55px; */
     }
 
     /* Footer adjustments */
