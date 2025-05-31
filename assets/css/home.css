@@ -793,6 +793,9 @@
     padding: 40px;
     box-sizing: border-box;
     visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .mission-box {
@@ -804,8 +807,8 @@
 .mission-box h4 {
     color: #0072ce;
     font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 5px;
     visibility: visible;
 }
 
@@ -818,9 +821,10 @@
 }
 
 .mission-box p {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     font-size: 16px;
-    color: #333;
+    font-weight: 500;
+    color: #000000;
     visibility: visible;
 }
 
@@ -859,7 +863,7 @@
 
 .about-box p {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     visibility: visible;
 }
 
@@ -1528,7 +1532,8 @@
 }
 
 .card-image {
-    width: 100%;
+    width:100%;
+    height:250px;
     border-radius: 12px;
     object-fit: cover;
     transition: transform 0.4s ease;
@@ -1539,8 +1544,9 @@
 }
 
 .card-text {
-    font-size: 13px;
+    font-size: 14px;
     color: #333;
+    font-weight: 600;
     margin: 10px 0;
     line-height: 1.4;
 }

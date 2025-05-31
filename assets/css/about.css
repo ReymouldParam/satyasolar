@@ -43,6 +43,18 @@ body {
     flex-wrap: wrap;
 }
 
+.our-story2 {
+    background-color: #0e6fb5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    padding: 40px;
+    margin: 70px;
+    flex-wrap: wrap;
+
+}
+
 .content {
     max-width: 55%;
 }
@@ -65,9 +77,10 @@ body {
 
 .headline .highlight {
     color: #1A91DA;
+    font-weight: 700;
 }
 
-.description {
+.description-our {
     font-size: 16px;
     margin-top: 20px;
     line-height: 1.6;
@@ -85,6 +98,60 @@ body {
     object-fit: cover;
     margin-right: -40px;
 }
+
+.ceo-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+}
+
+.ceo-section .image-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.ceo-section .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.ceo-section .content {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.headline2 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+    color: #ffb100;
+}
+
+.highlight {
+    color: #ffb100;
+    font-size: 32px;
+    /* Example highlight color */
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    font-weight: 500;
+}
+
+.ceo-name {
+    font-style: italic;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
 
 @media (max-width: 768px) {
     .nav-menu ul li a {
@@ -205,9 +272,10 @@ body {
 }
 
 .stat-card p {
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
+    color: #000000;
     margin-top: 5px;
+    font-weight: 700;
 }
 
 /* section3 */
@@ -409,11 +477,14 @@ body {
     }
 
     .our-story h2 {
-        font-size: 2.2rem;
+        font-size: 32px;
+        font-weight: 700;
     }
 
-    .our-story p {
-        font-size: 1.1rem;
+    .description-our {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
     }
 }
 
@@ -492,7 +563,8 @@ body {
 }
 
 /* Retina Displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .about-hero {
         background-image: url('../images/about-bg.png');
         background-size: cover;
