@@ -79,7 +79,7 @@ body {
 @media (max-width: 768px) {
     .nav-menu ul li a {
         text-decoration: none;
-        color:white;
+        color: white;
         font-weight: 600;
         transition: color 0.3s;
     }
@@ -186,9 +186,9 @@ body {
     }
 
     .intro-text {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 25px;
+        padding: 0px 25px;
+        font-size: 20px;
+        margin-top: 0px;
     }
 
     .intro-text h2 {
@@ -301,7 +301,8 @@ body {
 }
 
 /* Retina Displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .solar-services {
         background-image: url('../images/services-bg.png');
         background-size: cover;
