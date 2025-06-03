@@ -50,9 +50,15 @@ body {
     align-items: center;
     border-radius: 40px;
     padding: 40px;
-    margin: 70px;
+    width: 90%;
+    margin: auto;
     flex-wrap: wrap;
+}
 
+@media (max-width: 768px) {
+    .our-story2 {
+        margin: 5px;
+    }
 }
 
 .content {
@@ -228,6 +234,7 @@ body {
     .image-container img {
         height: 200px;
     }
+
 }
 
 /* section2 */
