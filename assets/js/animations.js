@@ -527,24 +527,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-//  FOR MOBILE HEADER
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Optional: Close menu when a nav link is clicked
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-});
 
 // GET Quote Pop-up
 function openPopup() {
@@ -554,13 +536,3 @@ function openPopup() {
 function closePopup() {
     document.getElementById('quotePopup').style.display = 'none';
 }
-
-// Header scroll effect
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.main-header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});

@@ -98,7 +98,7 @@ body {
         width: 100%;
         font-size: 14px;
         margin-bottom: 20px;
-        margin-top: 60px;
+       
     }
 
     .service-grid {
@@ -130,7 +130,7 @@ body {
     }
 
     .logo img {
-        height: 35px;
+        height: 50px;
     }
 
     .nav-menu {

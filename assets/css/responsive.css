@@ -349,7 +349,6 @@
 
     .logo img,
     .brand-logo img,
-    .card-image img,
     .testimonial-image img {
         transform: scale(1.1);
     }
