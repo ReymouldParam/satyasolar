@@ -1,0 +1,141 @@
+/* Mobile-only styles - These styles only apply to mobile devices */
+@media screen and (max-width: 768px) {
+    /* Header and Navigation */
+    .main-header {
+        padding: 10px 5%;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .nav-menu ul li a {
+        color: white;
+    }
+
+    .quote-button {
+        display: none;
+    }
+
+    /* Content Sections */
+    .residential-rooftops {
+        padding: 20px 5%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Advantages Section */
+    .advantages {
+        margin: 20px 5%;
+        padding: 30px 20px;
+    }
+
+    .advantages h2 {
+        font-size: 24px;
+    }
+
+    .advantage-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .adv-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .adv-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .adv-card h4 {
+        font-size: 20px;
+    }
+
+    .adv-card p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+
+    .map-box {
+        margin-bottom: 20px;
+    }
+
+    .email-box {
+        flex-direction: column;
+    }
+
+    .email-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact-info, .office-address {
+        text-align: center;
+    }
+
+    /* Quote Popup */
+    .quote-popup .popup-content {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .popup-form {
+        padding: 15px;
+    }
+
+    /* Form Elements */
+    input, textarea, button {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+} 

@@ -138,3 +138,178 @@ p {
         transition: color 0.3s;
     }
 }
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .main-header {
+        padding: 10px 5%;
+        position: relative;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .quote-button {
+        display: none;
+    }
+
+    .residential-rooftops {
+        padding: 20px 5%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .advantages {
+        margin: 20px 5%;
+        padding: 30px 20px;
+    }
+
+    .advantages h2 {
+        font-size: 24px;
+    }
+
+    .advantage-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .adv-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .adv-card img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .adv-card h4 {
+        font-size: 20px;
+    }
+
+    .adv-card p {
+        font-size: 14px;
+    }
+
+    /* Footer Responsive Styles */
+    .footer-container {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+
+    .map-box {
+        margin-bottom: 20px;
+    }
+
+    .email-box {
+        flex-direction: column;
+    }
+
+    .email-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact-info, .office-address {
+        text-align: center;
+    }
+
+    /* Quote Popup Responsive */
+    .quote-popup .popup-content {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .popup-form {
+        padding: 15px;
+    }
+}
+
+/* Tablet Responsive Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .container {
+        gap: 30px;
+    }
+
+    .left, .right {
+        flex: 1;
+    }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve form elements on mobile */
+@media screen and (max-width: 768px) {
+    input, textarea, button {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+    }
+}
