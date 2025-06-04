@@ -98,7 +98,7 @@ body {
         width: 100%;
         font-size: 14px;
         margin-bottom: 20px;
-       
+
     }
 
     .service-grid {
@@ -181,14 +181,15 @@ body {
 @media screen and (min-width: 1366px) and (max-width: 1919px) {
     .solar-services {
         max-width: 1200px;
-        margin: 40px auto;
-        padding: 50px;
+        margin: 20px auto;
+        padding: 10px;
     }
 
     .intro-text {
         padding: 0px 25px;
-        font-size: 20px;
+        font-size: 16px;
         margin-top: 0px;
+        font-weight: 700;
     }
 
     .intro-text h2 {
