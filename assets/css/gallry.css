@@ -50,7 +50,7 @@ body {
 .service-card {
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 300px;
     border-radius: 20px;
     position: relative;
     display: flex;
