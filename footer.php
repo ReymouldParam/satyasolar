@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Recipient email
-    $to = "naresh.narnapati@reymould.com";
+    $to = "sales@krisolsolar.com, reymould.social@gmail.com";
 
     // Email subject and body
     $subject = "Email Enquiry from krisol.com website";
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Redirect based on result
     if ($emailSent) {
-        header("Location: index.html?emailSuccess=true");
+        header("Location: contact.html?emailSuccess=true");
     } else {
         header("Location: contact.html?emailSuccess=false");
     }

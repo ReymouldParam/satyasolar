@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = $_POST['message'];
 
     // Recipient email
-    $to = "naresh.narnapati@reymould.com";
+     $to = "sales@krisolsolar.com, reymould.social@gmail.com";
 
     // Email subject and body
     $subject = "Email Enquiry from shekara.com website";
