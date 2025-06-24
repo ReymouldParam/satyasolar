@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const flagValue = urlParams.get('emailSuccess');
     const popupMessage = document.getElementById("popup-message");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    closePopup.addEventListener("click", function () {
+    closePopup.addEventListener("click", function() {
         popupMessage.style.display = "none";
 
 
