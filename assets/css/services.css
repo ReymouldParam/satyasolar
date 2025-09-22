@@ -11,6 +11,7 @@ body {
     background: transparent;
     padding: 0.5% 2%;
     margin-bottom: 1%;
+    z-index: 1001;
 }
 
 .nav-menu ul li a {
@@ -78,7 +79,7 @@ body {
 @media (max-width: 768px) {
     .nav-menu ul li a {
         text-decoration: none;
-        color: white;
+        color: #000000;
         font-weight: 600;
         transition: color 0.3s;
     }
@@ -86,7 +87,9 @@ body {
     .main-header {
         background: transparent;
         padding: 0.5% 2%;
-        margin-bottom: 1%;
+        margin-bottom: jus;
+        justify-content: space-between;
+        margin-bottom: 10px;
     }
 
     .solar-services {
@@ -107,7 +110,7 @@ body {
 
     .service-card {
         height: 300px;
-        background-size: contain;
+        /* background-size: contain; */
         background-repeat: no-repeat;
         border-radius: 5px;
         padding: 20px;
@@ -132,6 +135,7 @@ body {
         height: 50px;
     }
 
+    /* 
     .nav-menu {
         position: fixed;
         top: 0;
@@ -141,7 +145,7 @@ body {
         background-color: rgba(0, 0, 0, 0.95);
         padding: 80px 20px;
         transition: right 0.3s ease-in-out;
-    }
+    } */
 
     .nav-menu.active {
         right: 0;
