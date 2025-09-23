@@ -1,6 +1,6 @@
 body {
     margin: 0;
- 
+
     background-color: #fff;
     color: #000;
 }
@@ -22,8 +22,6 @@ body {
     transition: color 0.3s;
 }
 
-
-
 .solar-services {
     padding: 10px 20px;
     max-width: 1200px;
@@ -37,8 +35,8 @@ body {
     font-size: 14px;
     line-height: 1.6;
     color: #333;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .service-grid {
@@ -59,13 +57,14 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width:768px){
-    .intro-text{
+@media screen and (max-width:768px) {
+    .intro-text {
         margin-top: 0%;
     }
+
     .nav-menu ul li a {
         text-decoration: none;
-        color:#000000;
+        color: #000000;
         font-weight: 600;
         transition: color 0.3s;
     }
