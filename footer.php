@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Recipient email
-    $to = "sales@krisolsolar.com, reymould.social@gmail.com";
+    $to = "sales@krisolsolar.com";
 
     // Email subject and body
     $subject = "Email Enquiry from krisol.com website";

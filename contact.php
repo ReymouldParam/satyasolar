@@ -1,20 +1,20 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Collect data from form
-    $name    = $_POST['name'];
-    $number  = $_POST['number'];
-    $email   = $_POST['email'];
+    $name = $_POST['name'];
+    $number = $_POST['number'];
+    $email = $_POST['email'];
     $message = $_POST['message'];
 
     // Recipient email
-    $to = "naresh.narnapati@reymould.com";
+    $to = "sales@krisolsolar.com";
 
     // Email subject and body
-    $subject = "Email Enquiry from shekarandco.com website";
+    $subject = "Email Enquiry from krisolsolar website";
     $body = "Name: $name\n"
-          . "Email: $email\n"
-          . "Phone: $number\n"
-          . "Message:\n$message";
+        . "Email: $email\n"
+        . "Phone: $number\n"
+        . "Message:\n$message";
 
     // Send the email
     $emailSent = mail($to, $subject, $body);
