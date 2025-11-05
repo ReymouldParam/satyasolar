@@ -16,11 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $subject = "Email Enquiry from krisol.com website";
     $body = "Email: $email\n";
 
-    // Optional: Set headers (better email formatting)
-    $headers = "From: noreply@krisol.com\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
     // Send the email
     $emailSent = mail($to, $subject, $body, $headers);
 
