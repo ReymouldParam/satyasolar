@@ -54,6 +54,7 @@ body {
 
 .logo img {
     height: 60px;
+    filter: contrast(1.2);
 }
 
 .nav-menu ul {
@@ -565,6 +566,27 @@ body {
     margin-right: 10px;
     font-size: 16px;
     width: 20px;
+}
+
+.social-links {
+    display: inline-flex;
+    margin-top: 8px;
+}
+
+.social-links a {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-left: -150px;
+}
+
+.social-links i {
+  color: #fff;
+  font-size: 25px;
 }
 
 .contact-info p,
