@@ -30,7 +30,6 @@ body {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: all 0.3s ease;
-    flex-wrap: wrap;
     background: rgba(255, 255, 255, 0.8);
 }
 
@@ -123,9 +122,10 @@ body {
 .nav-menu ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 0px;
     margin: 0;
     padding: 0;
+
 }
 
 .nav-menu ul li a {
@@ -1074,6 +1074,23 @@ body {
 }
 
 .quote-button .btn:hover {
+    background-color: #e59a00;
+}
+
+.get-quote-btn {
+    position: fixed;
+    z-index: 10;
+    top: 200px;
+    color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    rotate: 270deg;
+    left: -50px;
     background-color: #e59a00;
 }
 
