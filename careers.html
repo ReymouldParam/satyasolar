@@ -105,8 +105,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><a href="contact.html" class="link-style-two"
-                                            style="margin-bottom: 20px;">Apply Now</a></div>
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Sales Manager')" style="margin-bottom: 20px;">Apply Now</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -139,8 +139,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><a href="contact.html" class="link-style-two"
-                                            style="margin-bottom: 20px;">Apply Now</a></div>
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Tele Callers')"
+                                            style="margin-bottom: 20px;">Apply Now</button></div>
                                 </div>
                             </div>
                         </div>
@@ -173,8 +173,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><a href="contact.html" class="link-style-two"
-                                            style="margin-bottom: 20px;">Apply Now</a></div>
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Sales Executive')"
+                                            style="margin-bottom: 20px;">Apply Now</button></div>
                                 </div>
                             </div>
                         </div>
@@ -204,8 +204,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><a href="contact.html" class="link-style-two"
-                                            style="margin-bottom: 20px;">Apply Now</a></div>
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Accountant')"
+                                            style="margin-bottom: 20px;">Apply Now</button></div>
                                 </div>
                             </div>
                         </div>
@@ -291,11 +291,53 @@
 
                         <label>Your City</label>
                         <input name="city" type="text" placeholder="Enter Your City" />
+
                         <label>Email Address</label>
                         <input type="email" placeholder="@Gmail.Com" />
 
                         <label>Message</label>
                         <textarea placeholder="@Gmail.Com"></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Apply Now Popup -->
+        <div class="applynow-popup" id="applynowPopup">
+            <div class="popup-content">
+                <div class="popup-image">
+                    <img src="assets/images/solar-panel-fixing.svg" alt="Solar Panel" />
+                </div>
+                <div class="popup-form">
+                    <div class="popup-header">
+                        <div>
+                            <img src="./assets/images/krisol.png" alt="Logo" style="width:100%;height: 50px;">
+                        </div>
+                        <span class="close-btn" onclick="closeApplyPopup()">&times;</span>
+                    </div>
+                    <h3>Apply Now</h3>
+                    <form action="applynow.php" method="POST">
+                        <label>Full Name</label>
+                        <input name="name" type="text" placeholder="Enter Your Full Name" />
+
+                        <label>Phone Number</label>
+                        <input name="number" type="number" placeholder="Enter Your Mobile Number" />
+
+                        <label>Designation</label>
+                        <input name="designation" type="text" id="jobRole" readonly>
+
+                        <label>Experience</label>
+                        <input name="city" type="text" placeholder="Enter Your Experience" />
+
+                        <label>Email Address</label>
+                        <input name="email" type="email" placeholder="@Gmail.Com" />
+
+                        <label>Resume Link</label>
+                        <input name="Resume" type="text" placeholder="Add Your Resume Link" />
+
+                        <label>Message</label>
+                        <textarea name="message" placeholder="@Gmail.Com"></textarea>
 
                         <button type="submit">Submit</button>
                     </form>
@@ -315,7 +357,51 @@
     <script src="assets/js/about-animations.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/accordion.js"></script>
-    
+    <script>
+        function openApplyPopup() {
+            console.log(1);
+
+            const popup = document.getElementById("applynowPopup");
+            popup.style.display = "flex";
+
+            const popupTimeline = gsap.timeline();
+
+            popupTimeline
+                .from(".popup-content", {
+                    duration: 0.6,
+                    scale: 0.8,
+                    opacity: 0,
+                    ease: "back.out(1.7)"
+                })
+                .from(".popup-form form", {
+                    duration: 0.4,
+                    y: 20,
+                    opacity: 0,
+                    stagger: 0.1,
+                    ease: "power2.out"
+                }, "-=0.3");
+        }
+
+        function closeApplyPopup() {
+            document.getElementById('applynowPopup').style.display = 'none';
+        }
+
+    </script>
+    <script>
+            function openApplyPopup(role) {
+            // Set value in popup input
+            document.getElementById("jobRole").value = role;
+
+            // Show popup
+            document.getElementById("applynowPopup").style.display = "flex";
+        }
+
+            function closeApplyPopup() {
+                document.getElementById("applynowPopup").style.display = "none";
+        }
+    </script>
+
+
 </body>
 
 </html>
