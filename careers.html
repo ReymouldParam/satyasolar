@@ -105,7 +105,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Sales Manager')" style="margin-bottom: 20px;">Apply Now</button>
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('sales_manager')" style="margin-bottom: 20px;">Apply Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Tele Callers')"
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('telecaller')"
                                             style="margin-bottom: 20px;">Apply Now</button></div>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Sales Executive')"
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('sales_executive')"
                                             style="margin-bottom: 20px;">Apply Now</button></div>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('Accountant')"
+                                    <div><button class="link-style-two" class="get-quote-btn" onclick="openApplyPopup('accountant')"
                                             style="margin-bottom: 20px;">Apply Now</button></div>
                                 </div>
                             </div>
@@ -213,6 +213,7 @@
                 </div>
         </section>
 
+       
         <!-- footer  -->
         <!-- section7 -->
         <section class="section7">
@@ -306,8 +307,14 @@
         <!-- Apply Now Popup -->
         <div class="applynow-popup" id="applynowPopup">
             <div class="popup-content">
-                <div class="popup-image">
-                    <img src="assets/images/solar-panel-fixing.svg" alt="Solar Panel" />
+                <div class="popup-left">
+                    <div class="job-desc-box">
+                      <h2 id="jobtitle" style="padding-left: 69px;"> Job Description </h2>
+                      <h3 style="padding-left: 52px;"> Roles & Responsibilities </h3>
+                      <ul id="jobDescription" style="font-size: 13px;"> Roles & Responsibilities </ul>
+                      <h4> Experience </h4>
+                      <p> 1 - 3 years</p>
+                    </div>
                 </div>
                 <div class="popup-form">
                     <div class="popup-header">
@@ -325,7 +332,7 @@
                         <input name="number" type="number" placeholder="Enter Your Mobile Number" />
 
                         <label>Designation</label>
-                        <input name="designation" type="text" id="jobRole" readonly>
+                        <input name="designation" type="text" id="jobTitle" readonly>
 
                         <label>Experience</label>
                         <input name="city" type="text" placeholder="Enter Your Experience" />
@@ -387,7 +394,7 @@
         }
 
     </script>
-    <script>
+    <!-- <script>
             function openApplyPopup(role) {
             // Set value in popup input
             document.getElementById("jobRole").value = role;
@@ -399,8 +406,75 @@
             function closeApplyPopup() {
                 document.getElementById("applynowPopup").style.display = "none";
         }
-    </script>
+    </script> -->
 
+    <script>
+        const jobs = {
+            sales_manager: {
+                title: "Sales Manager",
+                desc: [
+                    "Develop and implement sales strategies to achieve company revenue targets.",
+                    "Identify new business opportunities in residential, commercial, and industrial solar projects.",
+                    "Build and maintain strong relationships with clients, channel partners, and key stakeholders.",
+                    "Lead, train, and motivate the sales team to improve performance and productivity.",
+                    "Conduct market research to understand customer needs, competitors, and industry trends."
+                ]          
+            },
+
+            telecaller: {
+                title: "Telecaller",
+                desc: [
+                    "Make outbound calls to prospective customers to promote solar products and services.",
+                    "Receive and handle inbound customer inquiries in a professional manner.",
+                    "Provide accurate information about solar solutions, pricing, and benefits.",
+                    "Generate leads and schedule appointments for the sales team.",
+                    "Maintain updated customer records and call logs in CRM or company systems.",
+                    "Follow up with potential clients to convert inquiries into business opportunities."
+                ]
+            },
+
+            sales_executive: {
+                title: "Sales Executive",
+                desc: [
+                    "Identify and approach potential customers to promote solar energy solutions.",
+                    "Explain product features, benefits, and project processes clearly to clients.",
+                    "Generate leads and convert inquiries into confirmed sales.",
+                    "Conduct site visits and coordinate with technical teams for project assessments.",
+                    "Prepare quotations, proposals, and follow-up communications.",
+                    "Maintain strong relationships with customers to ensure satisfaction and repeat business."
+                ]
+            },
+
+            accountant: {
+                title: "Accountant",
+                desc: [
+                    "The Accountant will be responsible for handling day-to-day accounting activities including maintaining books of accounts, recording vouchers and journal entries, and performing regular bank reconciliations.",
+                    "The role involves preparing invoices, monitoring receivables, managing payables, and ensuring timely payments.",
+                    "The candidate will assist in GST and TDS compliance, including data preparation, reconciliations, and return filings, while maintaining proper financial records and documentation.",
+                    " Attention to detail, accuracy, and adherence to deadlines are essential for this role."
+                ]
+            }
+        };
+    </script>
+    <script>
+        function openApplyPopup(role) {
+
+            const job = jobs[role];
+
+            document.getElementById("jobTitle").value = job.title;
+
+            const descContainer = document.getElementById("jobDescription");
+            descContainer.innerHTML = ""; 
+
+            job.desc.forEach(function(point){ 
+                 const li = document.createElement("li");
+                 li.innerText = point;
+                 descContainer.appendChild(li);
+            });
+
+            document.getElementById("applynowPopup").style.display = "flex";
+        }
+    </script>
 
 </body>
 
